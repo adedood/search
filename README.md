@@ -17,6 +17,8 @@ Where no additional arguments are given, script will search for the working dire
 A mix of Breadth First Search and Depth First Search is used. 
 BFS is used to locate the files in immediate directory, followed by a recursive DFS to search subsequent directories. 
 
+Non-text files such as binaries will also be excluded from the search 
+
 # Test Cases
 Execute test cases in test.sh script
 Script with basic test cases of files to search for

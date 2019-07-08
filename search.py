@@ -32,13 +32,12 @@ def FullList(dir_name):
 
 #Search through each file for keyword (eg: "TODO") and print every file containing "TODO"
 def SearchFile(files_list):
-    keywordFiles = []
+    keywordFiles = list()
     for eachfile in filespath:
         toread = open(eachfile, "r")
         try: 
             for line in toread:
                 if re.search(keyword, line):
-                    print(eachfile)
                     keywordFiles.append(eachfile)
                 else:
                     continue
@@ -52,5 +51,6 @@ def SearchFile(files_list):
 filespath = FullList(directory)
 
 #Return all files containing keyword "TODO"
-print(SearchFile(filespath))
-print('')
+uniquelist = SearchFile(filespath)
+for row in uniquelist: 
+    print(row)
