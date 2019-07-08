@@ -6,10 +6,7 @@ import re
 import sys
 
 #option to choose a directory by providing the full path, otherwise, current working directory will be used
-if len(sys.argv) == 2:
-    directory = sys.argv[1]
-    keyword = '"TODO"'
-elif len(sys.argv) > 2: 
+if len(sys.argv) > 2: 
     directory = input("Full path or subdirectory you would like to search: ")
     keyword = input("Keyword you like to search: ")
 else: 
@@ -55,8 +52,5 @@ def SearchFile(files_list):
 filespath = FullList(directory)
 
 #Return all files containing keyword "TODO"
-print(SearchFile(filespath)
+print(SearchFile(filespath))
 print('')
-
-
-
